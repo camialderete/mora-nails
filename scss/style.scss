@@ -1,0 +1,129 @@
+// VARIABLES
+$rosa-principal: pink;
+$rosa-secundario: rgb(206, 130, 143);
+$rosa-fuerte: rgb(219, 38, 146);
+$fondo: beige;
+$blanco: whitesmoke;
+$tipografia: Georgia, 'Times New Roman', Times, serif;
+
+// MIXIN ANIMACIONES
+@mixin animacion($name, $duracion: 1s, $delay: 0s) {
+  animation: $name $duracion ease-in-out both;
+  animation-delay: $delay;
+}
+
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// BODY
+body {
+  background-color: $fondo;
+  font-family: $tipografia;
+  text-align: center;
+
+  img {
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+// ENCABEZADOS GENERALES
+h1 {
+  color: $rosa-principal;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+}
+
+// HEADER
+header {
+  background-color: rgb(207, 134, 146);
+  color: $blanco;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $blanco;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// MAIN
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-style: oblique;
+
+  h1 {
+    color: $rosa-secundario;
+  }
+
+  h3 {
+    color: $rosa-principal;
+  }
+
+  h4 {
+    color: $rosa-fuerte;
+  }
+}
+
+// ANIMACIONES
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar {
+  @include animacion(fadeUp, 1s);
+}
+
+.animar-servicio {
+  opacity: 0;
+  @include animacion(fadeInUp, 0.8s);
+}
+
+.animar-delay-1 { animation-delay: 0.2s; }
+.animar-delay-2 { animation-delay: 0.4s; }
+.animar-delay-3 { animation-delay: 0.6s; }

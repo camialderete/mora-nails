@@ -1,13 +1,13 @@
-/* RESET GENERAL*/
+/* reset general */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ESTILOS GENERALES*/
+/* estilos generales */
 body {
-  background-color: beige;
+  background-color: rgb(248, 213, 255);
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
 }
@@ -20,7 +20,7 @@ h2 {
   color: #442255;
 }
 
-/* HEADER  */
+/* header */
 header {
   background-color: #d7b2d8;
   color: whitesmoke;
@@ -44,7 +44,7 @@ header nav ul li a {
   font-weight: bold;
 }
 
-/* IMAGEN  */
+/* img */
 .img-galeria {
   width: 100%;
   height: 250px;
@@ -52,7 +52,7 @@ header nav ul li a {
   border-radius: 10px;
 }
 
-/* MAIN */
+/* main */
 main {
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ main {
   font-style: oblique;
 }
 
-/* TEXTOS EN MAIN */
+/* textos en main */
 main h1 {
   color: #442255;
 }
@@ -110,7 +110,7 @@ main h4 {
 .animar-delay-2 { animation-delay: 0.4s; }
 .animar-delay-3 { animation-delay: 0.6s; }
 
-/*IMG PRINCIPAL */
+/* img principal */
 @keyframes imagenFadeZoom {
   0% {
     opacity: 0;
@@ -126,7 +126,7 @@ main h4 {
   animation: imagenFadeZoom 1s ease forwards;
 }
 
-/* EFECTO HOVER */
+/* animacion */
 .img-galeria {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -136,28 +136,63 @@ main h4 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* FORMULARIO */
+/* formulario*/
+form {
+  background-color: #ffeffb;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(215, 178, 216, 0.4);
+  animation: fadeIn 0.7s ease-in;
+}
+
+form .form-label {
+  font-weight: bold;
+  color: #d17db5;
+}
+
+form .form-control {
+  border: 2px solid #e4bce9;
+  border-radius: 10px;
+}
+
+form .form-control:focus {
+  border-color: #d17db5;
+  box-shadow: 0 0 5px rgba(209, 125, 181, 0.5);
+}
+
 .btn-pink {
-  background-color: #442255;
+  background-color: #d7b2d8;
+  border: none;
   color: white;
 }
 
 .btn-pink:hover {
-  background-color: #442255;
-  color: white;
+  background-color: #c48fc7;
 }
 
-/* LOGO */
-.logo-inicio {
-  display: inline-block;
-  margin-bottom: 10px;
+@media (max-width: 576px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+  }
 }
 
-.logo-inicio img {
-  width: auto;
-  height: 160px;
-  max-width: 100%;
+
+/* logo */
+.logo-navbar {
+  height: 130px;
+  object-fit: contain;
 }
+@media (max-width: 576px) {
+  .logo-navbar {
+    height: 80px;
+  }
+}
+
 
 @media (max-width: 576px) {
   .logo-inicio img {
@@ -168,13 +203,89 @@ main h4 {
 /* estilo del footer */
 footer {
   background-color: #d7b2d8;
-  padding: 20px 0;
-  color: #442255; /* o blanco si preferís más contraste */
+  padding: 40px 0;
+  color: #442255; 
   text-align: center;
+
+}
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
 }
 
 /* h4 de servicio */
 .texto-servicio {
-  color: #85519f; /* Elegí el lila que estás usando en tu paleta */
+  color: #85519f; 
   font-weight: bold;
+}
+
+/* botón final */
+.btn-pink {
+  background-color: #d7b2d8;
+  color: white;
+  border: none;
+}
+.btn-pink:hover {
+  background-color: #c694c7;
+}
+
+/* recuadro de info, textos*/
+.recuadro-info {
+  background-color: #f8e9f9;
+  border: 2px solid #d7b2d8;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.recuadro-info:hover {
+  transform: translateY(-3px);
+}
+
+/*estilos de servicios*/
+.servicio-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  background-color: #fff0fa;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.servicio-box:hover {
+  transform: translateY(-5px);
+}
+
+.servicio-box img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.servicio-box .contenido {
+  flex: 1;
+  min-width: 250px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

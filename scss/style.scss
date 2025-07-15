@@ -1,4 +1,4 @@
-// VARIABLES
+// variiables
 $lila-principal: #442255;
 $lila-secundario: #85519f;
 $lila-fuerte: #431759;
@@ -6,20 +6,20 @@ $fondo: beige;
 $blanco: whitesmoke;
 $tipografia: Georgia, 'Times New Roman', Times, serif;
 
-// MIXIN ANIMACIONES
+// mixin animaciones
 @mixin animacion($name, $duracion: 1s, $delay: 0s) {
   animation: $name $duracion ease-in-out both;
   animation-delay: $delay;
 }
 
-// RESET
+// reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-// BODY
+// body
 body {
   background-color: $fondo;
   font-family: $tipografia;
@@ -33,7 +33,7 @@ body {
   }
 }
 
-// ENCABEZADOS GENERALES
+// encabezados generales
 h1 {
   color: $lila-principal
 }
@@ -42,7 +42,7 @@ h2 {
   color: $lila-secundario;
 }
 
-// HEADER
+// header
     header {
   background-color: $lila-secundario;
   color: white;
@@ -70,7 +70,7 @@ h2 {
   }
 }
 
-// MAIN
+// main
 main {
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ main {
   }
 }
 
-// ANIMACIONES
+// animaciones
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -128,7 +128,7 @@ main {
 .animar-delay-2 { animation-delay: 0.4s; }
 .animar-delay-3 { animation-delay: 0.6s; }
 
-//Menú hamburguesa
+//menú hamburguesa
 .header {
   background-color: #CF8692;
   padding: 10px 20px;
@@ -172,7 +172,7 @@ main {
     }
   }
 
-  // RESPONSIVE
+  // responsive
   @media (max-width: 768px) {
     .hamburger {
       display: block;
@@ -196,7 +196,7 @@ main {
   }
 }
 
-//LOGO
+//logo
 .logo-inicio {
   display: inline-block;
   margin-bottom: 10px;

@@ -4,52 +4,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mora Nails</title>
+  <title>Mora Nails - Manicura profesional</title>
+
+    <!-- SEO  -->
+  <meta name="description" content="Mora Nails ofrece servicios de manicura, esmaltado semipermanente, capping gel y soft gel. Atendé en un espacio profesional, cálido y personalizado.">
+  <meta name="keywords" content="manicura, uñas, esmaltado semipermanente, capping gel, soft gel, uñas decoradas, uñas en Argentina, Mora Nails">
+  <meta name="author" content="Camila Alderete">
+
+  <!-- para redes sociales -->
+  <meta property="og:title" content="Mora Nails - Uñas hermosas en manos felices 💅">
+  <meta property="og:description" content="Servicios profesionales de uñas: semipermanente, capping y soft gel.">
+  <meta property="og:image" content="https://tudominio.com/img/logo.png"> <!-- Cambiá a tu ruta real -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudominio.com">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-  <!-- Estilos personalizados -->
+  <!-- Estilos  -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
   <header class="text-center py-4">
-    <h1>Mora Nails</h1>
-    <h2>¡Bienvenidos a mi espacio de belleza!</h2>
+  <a href="index.html" class="logo-inicio">
+  <img src="img/logo.png" alt="Logo Mora Nails" />
+</a>
+  <h2>¡Bienvenidos a mi espacio de belleza!</h2>
 
-    <!-- Menú de navegación -->
-    <nav>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pages/servicios.html">Servicios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pages2/Contacto.html">Contacto</a>
-        </li>
-      </ul>
-    </nav>
+    <!-- Menú hamburguesa -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #d7b2d8;">
+    <div class="container-fluid justify-content-center">
+      <a class="navbar-brand d-lg-none" href="#">Menú</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/servicios.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   </header>
 
-  <main class="container my-5">
-  <div class="text-center mb-4 animar">
-    <img src="https://i.pinimg.com/736x/65/e8/1f/65e81fbf0cd9f5b8d8bb2967fbd40d96.jpg" class="img-fluid rounded"
-      alt="Uñas decoradas">
+<main class="container my-5">
+  <h1 class="text-center mb-4">¡El lugar perfecto para tus manos!</h1>
+    
+<div class="row g-4 mb-5 justify-content-center">
+  <div class="col-12 col-md-4">
+    <img src="https://i.pinimg.com/736x/65/e8/1f/65e81fbf0cd9f5b8d8bb2967fbd40d96.jpg" class="img-galeria img-animada" alt="Uñas decoradas 1">
   </div>
+  <div class="col-12 col-md-4">
+    <img src="img/manicura.jpg" class="img-galeria img-animada" alt="Uñas decoradas 2">
+  </div>
+  <div class="col-12 col-md-4">
+    <img src="img/manicura2.jpg" class="img-galeria img-animada" alt="Uñas decoradas 3">
+  </div>
+</div>
 
   <div class="textos animar">
-    <h3>Mi nombre es Camila</h3>
+    <h2>Mi nombre es Camila</h2>
     <p>
-      Soy manicura profesional. Desde hace varios años me dedico con pasión al cuidado y embellecimiento de las manos, 
+      Soy manicura profesional. Desde hace tres años me dedico con pasión al cuidado y embellecimiento de las manos, 
       ofreciendo un espacio donde cada clienta se sienta mimada, escuchada y salga feliz con sus uñas.
     </p>
     <p>
-      Me especializo en técnicas como <strong>esmaltado semipermanente, capping gel y soft gel</strong>, 
+      Me especializo en técnicas como 
+      <span class="texto-servicio">esmaltado semipermanente</span>, 
+      <span class="texto-servicio">capping gel</span> y 
+      <span class="texto-servicio">soft gel</span>, 
       siempre utilizando productos de calidad y priorizando la salud de tus uñas.
     </p>
     <p>
@@ -69,6 +104,16 @@
     </p>
   </div>
 </main>
+
+<div class="text-center mt-5">
+  <a href="pages/contacto.html" class="btn btn-pink px-5 py-2">Reservar turno</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 Camila Alderete. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
